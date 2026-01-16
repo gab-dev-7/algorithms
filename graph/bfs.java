@@ -31,7 +31,7 @@ public class bfs {
   }
 
   public static void main(String[] args) {
-    // Graph representation: 0 connected to 1, 2; 1 connected to 2;
+    // Graph: 0 connected to 1, 2; 1 connected to 2;
     // 2 connected to 0, 3; 3 connected to 3
     int nodes = 4;
     List<List<Integer>> adj = new ArrayList<>(nodes);
