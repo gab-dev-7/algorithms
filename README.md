@@ -6,7 +6,7 @@ Essential algorithms and data structures implemented in Java for learning and ex
 
 - **Data Structures**: Trees, Lists, Queues, Stacks
 - **Dynamic Programming**: Knapsack, Fibonacci, Subsequence problems
-- **Graph Algorithms**: BFS, Shortest Paths, MST, Euler/Hamilton paths
+- **Graph Algorithms**: BFS, DFS, Shortest Paths, MST, Euler/Hamilton paths
 - **Search & Sort**: Binary Search, Quick Sort, Merge Sort, etc.
 - **Specialized**: Karatsuba multiplication, Pasture Break
 
