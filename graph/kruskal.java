@@ -53,8 +53,26 @@ public class kruskal {
         dsu.union(edge.u, edge.v);
         totalWeight += edge.weight;
         edgesCount++;
+        if (edgesCount == nodes - 1) {
+            break;
+        }
       }
-      return totalWeight;
     }
+    return totalWeight;
   }
+
+    public static void main(String[] args) {
+        int nodes = 4;
+        List<Edge> edges = new ArrayList<>();
+
+        edges.add(new Edge(0, 1, 10));
+        edges.add(new Edge(0, 2, 6));
+        edges.add(new Edge(0, 3, 5));
+        edges.add(new Edge(1, 3, 15));
+        edges.add(new Edge(2, 3, 4));
+
+        int mstWeight = findMST(nodes, edges);
+        System.out.println("Total weight of Minimum Spanning Tree: " + mstWeight);
+        // Expected Output: 19
+    }
 }
