@@ -1,3 +1,5 @@
+package dp;
+
 public class fibonacci {
 
   // Recursive approach
@@ -7,9 +9,15 @@ public class fibonacci {
     return fibRecursive(n - 1) + fibRecursive(n - 2);
   }
 
-  // Memoization (Top-Down)
-  public static int fibMemo(int n, int[] memo) {
+  // Memoization (Top-Down) - Wrapper method
+  public static int fibMemo(int n) {
+      if (n < 0) return -1; // Or throw an exception
+      if (n == 0) return 0;
+      int[] memo = new int[n + 1];
+      return fibMemo(n, memo);
+  }
 
+  private static int fibMemo(int n, int[] memo) {
     if (n <= 1)
       return n;
 
@@ -22,6 +30,8 @@ public class fibonacci {
 
   // Tabulation (Bottom-Up)
   public static int fibTab(int n) {
+    if (n < 0) return -1; // Or throw an exception
+    if (n <= 1) return n;
 
     int[] f = new int[n + 1];
     f[0] = 0;
@@ -36,6 +46,28 @@ public class fibonacci {
 
   public static void main(String[] args) {
     int n = 10;
-    System.out.println("Fibonacci of " + n + " is: " + fibTab(n));
+    System.out.println("For n = " + n);
+    System.out.println("Recursive: " + fibRecursive(n));
+    System.out.println("Memoization: " + fibMemo(n));
+    System.out.println("Tabulation: " + fibTab(n));
+    
+    // A larger n to show the performance difference
+    int n_large = 40;
+    System.out.println("\nFor n = " + n_large);
+
+    long startTime = System.nanoTime();
+    int recursiveResult = fibRecursive(n_large);
+    long endTime = System.nanoTime();
+    System.out.println("Recursive: " + recursiveResult + " (took " + (endTime - startTime) / 1000000 + " ms)");
+
+    startTime = System.nanoTime();
+    int memoResult = fibMemo(n_large);
+    endTime = System.nanoTime();
+    System.out.println("Memoization: " + memoResult + " (took " + (endTime - startTime) / 1000000 + " ms)");
+
+    startTime = System.nanoTime();
+    int tabResult = fibTab(n_large);
+    endTime = System.nanoTime();
+    System.out.println("Tabulation: " + tabResult + " (took " + (endTime - startTime) / 1000000 + " ms)");
   }
 }

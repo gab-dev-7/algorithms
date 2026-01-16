@@ -1,3 +1,5 @@
+package dp;
+
 public class matrixChainMultiplication {
 
   public static int minCost(int[] p) {

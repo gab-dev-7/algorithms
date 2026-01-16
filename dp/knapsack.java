@@ -1,3 +1,5 @@
+package dp;
+
 public class knapsack {
 
   public static int solveKnapsack(int[] weights, int[] values, int capacity) {

@@ -1,3 +1,5 @@
+package dp;
+
 public class maxSubarraySum {
 
   public static int findMaxSum(int[] nums) {
@@ -9,9 +11,7 @@ public class maxSubarraySum {
 
     for (int i = 1; i < nums.length; i++) {
       currentMax = Math.max(nums[i], currentMax + nums[i]);
-      if (currentMax > totalMax) {
-        totalMax = currentMax;
-      }
+      totalMax = Math.max(totalMax, currentMax);
     }
 
     return totalMax;

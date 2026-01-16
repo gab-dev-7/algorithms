@@ -1,3 +1,5 @@
+package dp;
+
 public class subsetSum {
 
   public static boolean isSumPossible(int[] set, int targetSum) {
