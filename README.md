@@ -1,22 +1,23 @@
 # Java Algorithms
 
-Essential algorithms and data structures implemented in Java for learning and exam prep.
+Essential algorithms and data structures implemented in Java.
 
-## What's Inside
+## Contents
+- **adt**: Data Structures (Trees, Lists, Queues, Stacks, Union-Find)
+- **dp**: Dynamic Programming (Knapsack, LCS, LIS, etc.)
+- **graph**: Graph Algorithms (Shortest Paths, MST, Euler/Hamilton Paths)
+- **search**: Search algorithms
+- **sort**: Sorting algorithms
+- **random**: Specialized algorithms (Karatsuba, Word Break)
 
-- **Data Structures**: Trees, Lists, Queues, Stacks
-- **Dynamic Programming**: Knapsack, Fibonacci, Subsequence problems
-- **Graph Algorithms**: BFS, DFS, Shortest Paths, MST, Euler/Hamilton paths
-- **Search & Sort**: Binary Search, Quick Sort, Merge Sort, etc.
-- **Specialized**: Karatsuba multiplication, Pasture Break
+## Usage
 
-## How to Use
-
-1. Clone this repo
-2. Navigate to any algorithm folder
-3. Run:
-
+Compile all:
 ```bash
-javac YourFile.java
-java YourFile
+find . -name "*.java" | xargs javac -d bin
+```
+
+Run an algorithm (example):
+```bash
+java -cp bin sort.quickSort
 ```
