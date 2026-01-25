@@ -1,4 +1,3 @@
-package adt;
 
 // A Left-Leaning Red-Black Tree, which is a common way to implement a 2-3 Tree.
 // This implementation focuses on insertion and search.

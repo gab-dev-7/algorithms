@@ -1,4 +1,3 @@
-package adt;
 
 import java.util.NoSuchElementException;
 

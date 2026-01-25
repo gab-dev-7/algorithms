@@ -1,4 +1,3 @@
-package random;
 
 import java.math.BigInteger;
 

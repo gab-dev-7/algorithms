@@ -1,4 +1,3 @@
-package adt;
 
 import java.util.ArrayList;
 import java.util.Comparator;

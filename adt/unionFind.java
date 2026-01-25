@@ -1,4 +1,3 @@
-package adt;
 
 public class unionFind {
     private int[] parent;
